@@ -66,8 +66,12 @@
         function displayImage() {
             const code = document.getElementById('codeInput').value;
             const imageUrl = `/astroneer-codes/images/${code}.png`;
-            document.getElementById('imageDisplay').src = imageUrl;
-            document.getElementById('imageDisplay').style.display = 'block';
+            const imageDisplay = document.getElementById('imageDisplay');
+            imageDisplay.src = imageUrl;
+            imageDisplay.style.display = 'block';
+            imageDisplay.onerror = function() {
+                imageDisplay.src = '/astroneer-codes/images/huh.gif'; // Path to default image
+            };
         }
     </script>
 </head>
