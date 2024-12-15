@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Display</title>
+    <script>
+        function displayImage() {
+            const code = document.getElementById('codeInput').value;
+            const imageUrl = `/images/${code}.jpg`;
+            document.getElementById('imageDisplay').src = imageUrl;
+            document.getElementById('imageDisplay').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>Enter Code to Display Image</h1>
+    <form onsubmit="event.preventDefault(); displayImage();">
+        <label for="codeInput">Code:</label>
+        <input type="text" id="codeInput" name="code">
+        <button type="submit">Submit</button>
+    </form>
+    <img id="imageDisplay" style="display:none;" alt="Image will be displayed here">
+</body>
+</html>
