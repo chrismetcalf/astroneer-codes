@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redeem your Astroneer code!</title>
     <style>
-        body {
+        html, body {
+            height: 100%;
+            margin: 0;
             font-family: 'Arial', sans-serif;
             background-color: #0b3d91;
             color: #ffffff;
@@ -15,6 +17,13 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
+        }
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         h1 {
             margin-top: 50px;
@@ -48,6 +57,10 @@
             border: 5px solid #ffffff;
             border-radius: 10px;
         }
+        .footer {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
     </style>
     <script>
         function displayImage() {
@@ -59,12 +72,15 @@
     </script>
 </head>
 <body>
-    <h1>Enter Code to Redeem:</h1>
-    <form onsubmit="event.preventDefault(); displayImage();">
-        <label for="codeInput">Code:</label>
-        <input type="text" id="codeInput" name="code">
-        <button type="submit">Submit</button>
-    </form>
-    <img id="imageDisplay" style="display:none;" alt="Image will be displayed here">
+    <div class="wrapper">
+        <h1>Enter Code to Redeem:</h1>
+        <form onsubmit="event.preventDefault(); displayImage();">
+            <label for="codeInput">Code:</label>
+            <input type="text" id="codeInput" name="code">
+            <button type="submit">Submit</button>
+        </form>
+        <img id="imageDisplay" style="display:none;" alt="Image will be displayed here"/>
+        <p class="footer">Merry Christmas!!!</p>
+    </div>
 </body>
 </html>
