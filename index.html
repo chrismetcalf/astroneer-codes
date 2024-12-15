@@ -10,18 +10,12 @@
             background-color: #0b3d91;
             color: #ffffff;
             text-align: center;
-        }
-
-        .wrapper {
-            margin: 0 auto;
-            padding: 20px;
             background-image: url('/astroneer-codes/images/background.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
         }
-        
         h1 {
             margin-top: 50px;
             font-size: 2.5em;
@@ -54,12 +48,6 @@
             border: 5px solid #ffffff;
             border-radius: 10px;
         }
-        .footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            padding: 10px;
-        }
     </style>
     <script>
         function displayImage() {
@@ -71,15 +59,12 @@
     </script>
 </head>
 <body>
-    <div class="wrapper">
-        <h1>Enter Code to Redeem:</h1>
-        <form onsubmit="event.preventDefault(); displayImage();">
-            <label for="codeInput">Code:</label>
-            <input type="text" id="codeInput" name="code">
-            <button type="submit">Submit</button>
-        </form>
-        <img id="imageDisplay" style="display:none;" alt="Image will be displayed here"/>
-        <p class="footer">Merry Christmas!!!</p>
-    </div>
+    <h1>Enter Code to Redeem:</h1>
+    <form onsubmit="event.preventDefault(); displayImage();">
+        <label for="codeInput">Code:</label>
+        <input type="text" id="codeInput" name="code">
+        <button type="submit">Submit</button>
+    </form>
+    <img id="imageDisplay" style="display:none;" alt="Image will be displayed here">
 </body>
 </html>
